@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/github/languages/top/kimous/RunDog?style=plastic&color=E92063" alt="repo-top-language">
 <img src="https://img.shields.io/github/languages/count/kimous/RunDog?style=plastic&color=E92063" alt="repo-language-count">
 
-<em>Construit avec les outils et langages suivants:</em>
+<em>Construit avec les outils et langages suivants:</em>  
 <img src="https://img.shields.io/badge/-.NET%208.0-blueviolet?logo=dotnet" alt="Dotnet8">
 
 <br clear="left"/>
