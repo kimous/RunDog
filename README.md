@@ -54,6 +54,7 @@ RunDog à les features suivantes:
 - Quand on survole l'icône de RunDog le pourcentage d'utilisation du CPU s'affiche
 - Quand on clique-gauche sur l'icône de RunDog, un menu s'ouvre et affiches les différentes statistique en temps réél (CPU, RAM, Disques et Réseau)  
 <img src="https://github.com/kimous/RunDog/blob/main/screenshots/ScreenShot_menu_stats.png?raw=true" alt="menu_statistiques">  
+
 - Quand on clique-droit sur l'application, un menu s'ouvre et on peut :
   - Mettre en pause l'animation
   - Changer l'animal de l'animation
