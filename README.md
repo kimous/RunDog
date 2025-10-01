@@ -12,9 +12,9 @@
 <img src="https://img.shields.io/github/languages/top/kimous/RunDog?style=plastic&color=E92063" alt="repo-top-language">
 <img src="https://img.shields.io/github/languages/count/kimous/RunDog?style=plastic&color=E92063" alt="repo-language-count">
 
-<em>Built with the tools and technologies:</em>
+<em>Construit avec les outils et langages suivants:</em>
 
-<img src="https://img.shields.io/badge/NuGet-004880.svg?style=plastic&logo=NuGet&logoColor=white" alt="NuGet">
+<img src="https://img.shields.io/badge/-.NET%208.0-blueviolet?logo=dotnet" alt="Dotnet8">
 
 <br clear="left"/>
 
