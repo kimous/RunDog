@@ -86,6 +86,8 @@ RunDog à les features suivantes:
     │   ├── cpu.png
     │   ├── disque_storage.png
     │   └── ram_memory.png
+    ├── screenshots
+    │   └── ScreenShot_menu_stats.png
     ├── logo.ico
     └── logo.png
 ```
