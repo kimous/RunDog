@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="animaux\rundog_animation_cat.png" />
+    <EmbeddedResource Include="animaux\rundog_animation_chien.png" />
+    <EmbeddedResource Include="icons\cpu.png" />
+    <EmbeddedResource Include="icons\ram_memory.png" />
+    <EmbeddedResource Include="icons\disque_storage.png" />
+    <EmbeddedResource Include="icons\connexion_network.png" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
