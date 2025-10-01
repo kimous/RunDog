@@ -139,7 +139,7 @@ dotnet run
 
 ## 📜 License
 
-Rundog is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+Rundog est sous [LICENSE MIT](https://github.com/kimous/RunDog/blob/main/LICENSE).
 
 ---
 
