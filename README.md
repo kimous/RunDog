@@ -1,10 +1,11 @@
 <div id="top">
 
 <!-- HEADER STYLE: COMPACT -->
-<img src="https://github.com/kimous/RunDog/blob/main/logo.png?raw=true" width="20%" align="left" style="margin-right: 15px">
+
 
 # RUNDOG
 <em></em>
+<img src="https://github.com/kimous/RunDog/blob/main/logo.png?raw=true" width="15%" align="left" style="margin-right: 15px">
 
 <!-- BADGES -->
 <img src="https://img.shields.io/github/license/kimous/RunDog?style=plastic&logo=opensourceinitiative&logoColor=white&color=E92063" alt="license">
@@ -13,7 +14,6 @@
 <img src="https://img.shields.io/github/languages/count/kimous/RunDog?style=plastic&color=E92063" alt="repo-language-count">
 
 <em>Construit avec les outils et langages suivants:</em>
-
 <img src="https://img.shields.io/badge/-.NET%208.0-blueviolet?logo=dotnet" alt="Dotnet8">
 
 <br clear="left"/>
