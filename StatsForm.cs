@@ -3,6 +3,7 @@ using System.Drawing.Drawing2D;
 using System.Management;
 using System.Net.NetworkInformation;
 using System.Reflection;
+using RunDog.Resources;
 
 namespace RunDog;
 
@@ -34,7 +35,7 @@ public partial class StatsForm : Form
             _cpuCounter?.NextValue();
             _ramCounter?.NextValue();
         }
-        catch (Exception ex) { Console.WriteLine($"Erreur PerfCounters: {ex.Message}"); }
+        catch (Exception ex) { Console.WriteLine($"{RunDog.Resources.Resources.ErrorPerfCounters}: {ex.Message}"); }
 
         this.FormBorderStyle = FormBorderStyle.None;
         this.ShowInTaskbar = false;
@@ -143,7 +144,7 @@ public partial class StatsForm : Form
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erreur lors de l'ouverture de l'explorateur: {ex.Message}");
+                Console.WriteLine($"{RunDog.Resources.Resources.ErrorOpeningExplorer}: {ex.Message}");
             }
         }
     }
@@ -151,7 +152,7 @@ public partial class StatsForm : Form
 
     private Control CreateNetworkSection()
     {
-        var titleLabel = new Label { Text="Réseau", AutoSize=true, ForeColor=Color.White, Font = new Font("Segoe UI", 9F, FontStyle.Bold) };
+        var titleLabel = new Label { Text=RunDog.Resources.Resources.NetworkTitle, AutoSize=true, ForeColor=Color.White, Font = new Font("Segoe UI", 9F, FontStyle.Bold) };
         lblNetworkDetails.ForeColor = Color.Gray;
         lblNetworkDetails.Font = new Font("Segoe UI", 8F);
         lblNetworkDetails.AutoSize = true;
@@ -175,7 +176,7 @@ public partial class StatsForm : Form
             
             // Feedback visuel
             var originalText = lblNetworkDetails.Text;
-            lblNetworkDetails.Text = "IP Locale: Copiée !";
+            lblNetworkDetails.Text = $"{RunDog.Resources.Resources.LocalIp}: {RunDog.Resources.Resources.Copied}";
             var t = new System.Windows.Forms.Timer { Interval = 1500 };
             t.Tick += (s, args) => {
                 lblNetworkDetails.Text = originalText;
@@ -189,11 +190,11 @@ public partial class StatsForm : Form
     private void UpdateStats()
     {
         float? cpuUsage = _cpuCounter?.NextValue();
-        lblCpuTitle.Text = $"CPU: {cpuUsage ?? 0:F0} %";
+        lblCpuTitle.Text = $"{RunDog.Resources.Resources.CpuTitle}: {cpuUsage ?? 0:F0} %";
         sparkCpu.AddValue(cpuUsage ?? 0);
 
         float? ramUsage = _ramCounter?.NextValue();
-        lblRamTitle.Text = $"Mémoire RAM: {ramUsage ?? 0:F0} %";
+        lblRamTitle.Text = $"{RunDog.Resources.Resources.RamTitle}: {ramUsage ?? 0:F0} %";
         sparkRam.AddValue(ramUsage ?? 0);
         sparkRam.LineColor = Color.MediumPurple;
 
@@ -205,16 +206,16 @@ public partial class StatsForm : Form
                 var usedDiskGb = (drive.TotalSize - drive.TotalFreeSpace) / 1073741824.0;
                 var totalDiskGb = drive.TotalSize / 1073741824.0;
                 var diskUsage = (usedDiskGb / totalDiskGb * 100.0);
-                _diskTitles[i].Text = $"Stockage ({drive.Name.Replace("\\", "")}{drive.VolumeLabel}): {diskUsage:F0} % utilisé";
+                _diskTitles[i].Text = $"{RunDog.Resources.Resources.StorageTitle} ({drive.Name.Replace("\\", "")}{drive.VolumeLabel}): {diskUsage:F0} % {RunDog.Resources.Resources.Used}";
                 _diskDetails[i].Text = $"{usedDiskGb:F1} GB / {totalDiskGb:F1} GB";
                 UpdateBar(_diskBars[i], (float)diskUsage);
             }
-            catch { _diskTitles[i].Text = "Stockage: N/A"; }
+            catch { _diskTitles[i].Text = $"{RunDog.Resources.Resources.StorageTitle}: N/A"; }
         }
 
         var (activeInterface, ipAddress) = GetActiveNetworkInterface();
         _currentIpAddress = ipAddress; // Stockage de l'IP
-        lblNetworkDetails.Text = $"{activeInterface}\nIP Locale: {ipAddress}";
+        lblNetworkDetails.Text = $"{activeInterface}\n{RunDog.Resources.Resources.LocalIp}: {ipAddress}";
     }
 
     private void UpdateBar(Panel bar, float? percentage) { if(bar.Parent != null) bar.Width = (int)(bar.Parent.Width * (percentage ?? 0) / 100.0f); }

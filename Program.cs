@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace RunDog
 {
     internal static class Program
@@ -8,6 +10,9 @@ namespace RunDog
         [STAThread]
         static void Main()
         {
+            // Définir la culture de l'interface utilisateur pour la localisation
+            CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InstalledUICulture;
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);;

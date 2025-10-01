@@ -41,7 +41,8 @@
 
 ## 🔴 Description
 
-Une application légère pour Windows qui affiche l'activité de votre système (CPU, RAM, Disques, Réseau) via une icône animée dans la barre des tâches, avec des statistiques détaillées.
+Une application légère pour Windows qui affiche l'activité de votre système (CPU, RAM, Disques, Réseau) via une icône animée dans la barre des tâches, avec des statistiques détaillées.  
+L'icône animée représente un animal qui court et celui-ci court de plus en vite suivant le pourcentage de CPU utilisé.
 
 L'application est inspirée d'une application existante nommée [RunCat](https://kyome.io/runcat/index.html) qui est disponible uniquement sur MacOs.
 
@@ -62,6 +63,9 @@ RunDog à les features suivantes:
   - Mettre en pause l'animation
   - Changer l'animal de l'animation
   - Quitter RunDog
+- Prise en charge multilangue : 
+  - Anglais (par défaut si langue non détectée ou non prise en charge)
+  - Français
 
 ---
 
@@ -88,6 +92,10 @@ RunDog à les features suivantes:
     │   └── ram_memory.png
     ├── screenshots
     │   └── ScreenShot_menu_stats.png
+    ├── Resources
+    │   ├── Resources.Designer.cs
+    │   ├── Resources.fr.resx
+    │   └── Resources.resx
     ├── logo.ico
     └── logo.png
 ```

@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using RunDog.Resources;
 
 namespace RunDog
 {
@@ -20,6 +21,7 @@ namespace RunDog
         private int _currentFrame = 0;
         private bool _isPaused = false;
         private StatsForm? _statsForm; // Ajout pour la nouvelle fenêtre
+        private ToolStripMenuItem _changeAnimalMenuItem; // Déclaration du champ
 
         private const int MIN_INTERVAL_MS = 20;
         private const int MAX_INTERVAL_MS = 200;
@@ -29,17 +31,17 @@ namespace RunDog
             _cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
             _cpuCounter.NextValue();
 
-            _spriteSheets.Add(new SpriteSheet("RunDog.animaux.rundog_animation_chien.png", 4, "Chien"));
-            _spriteSheets.Add(new SpriteSheet("RunDog.animaux.rundog_animation_cat.png", 4, "Chat"));
+            _spriteSheets.Add(new SpriteSheet("RunDog.animaux.rundog_animation_chien.png", 4, RunDog.Resources.Resources.DogAnimalName));
+            _spriteSheets.Add(new SpriteSheet("RunDog.animaux.rundog_animation_cat.png", 4, RunDog.Resources.Resources.CatAnimalName));
 
             var contextMenu = new ContextMenuStrip();
-            var pauseMenuItem = new ToolStripMenuItem("Mettre en pause", null, PauseOnClick);
-            var changeAnimalMenuItem = new ToolStripMenuItem("Changer l'animal");
-            UpdateAnimalSubMenu(changeAnimalMenuItem);
+            var pauseMenuItem = new ToolStripMenuItem(RunDog.Resources.Resources.PauseMenuItem, null, PauseOnClick);
+            _changeAnimalMenuItem = new ToolStripMenuItem(RunDog.Resources.Resources.ChangeAnimalMenuItem);
+            UpdateAnimalSubMenu(_changeAnimalMenuItem);
             contextMenu.Items.Add(pauseMenuItem);
-            contextMenu.Items.Add(changeAnimalMenuItem);
+            contextMenu.Items.Add(_changeAnimalMenuItem);
             contextMenu.Items.Add(new ToolStripSeparator());
-            contextMenu.Items.Add("Quitter", null, ExitOnClick);
+            contextMenu.Items.Add(RunDog.Resources.Resources.ExitMenuItem, null, ExitOnClick);
 
             _notifyIcon = new NotifyIcon()
             {
@@ -83,7 +85,8 @@ namespace RunDog
             {
                 var menuItem = new ToolStripMenuItem(spriteSheet.Name, null, ChangeAnimalOnClick)
                 {
-                    Tag = _spriteSheets.IndexOf(spriteSheet)
+                    Tag = _spriteSheets.IndexOf(spriteSheet),
+                    Checked = (_spriteSheets.IndexOf(spriteSheet) == _currentSpriteSheetIndex)
                 };
                 parentMenu.DropDownItems.Add(menuItem);
             }
@@ -104,7 +107,7 @@ namespace RunDog
         {
             _isPaused = !_isPaused;
             var menuItem = (ToolStripMenuItem)sender!;
-            menuItem.Text = _isPaused ? "Reprendre" : "Mettre en pause";
+            menuItem.Text = _isPaused ? RunDog.Resources.Resources.ResumeMenuItem : RunDog.Resources.Resources.PauseMenuItem;
         }
 
         private void ChangeAnimalOnClick(object? sender, EventArgs e)
@@ -112,6 +115,7 @@ namespace RunDog
             var menuItem = (ToolStripMenuItem)sender!;
             _currentSpriteSheetIndex = (int)menuItem.Tag!;
             _currentFrame = 0;
+            UpdateAnimalSubMenu(_changeAnimalMenuItem); // Mettre à jour le sous-menu après le changement d'animal
         }
 
         private void ExitOnClick(object? sender, EventArgs e)
