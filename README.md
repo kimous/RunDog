@@ -18,44 +18,50 @@
 
 <br clear="left"/>
 
-## 🌈 Table of Contents
+## 🌈 Sommaire
 
 <details>
-<summary>Table of Contents</summary>
+<summary>Sommaire</summary>
 
 - [RUNDOG](#rundog)
-  - [🌈 Table of Contents](#-table-of-contents)
-  - [🔴 Overview](#-overview)
+  - [🌈 Sommaire](#-sommaire)
+  - [🔴 Description](#-description)
   - [🟠 Features](#-features)
-  - [🟡 Project Structure](#-project-structure)
-    - [🟢 Project Index](#-project-index)
-  - [🔵 Getting Started](#-getting-started)
-    - [🟣 Prerequisites](#-prerequisites)
+  - [🟡 Structure du projet](#-structure-du-projet)
+  - [🔵 Commencer avec RunDog](#-commencer-avec-rundog)
+    - [🟣 Prérequis](#-prérequis)
     - [⚫ Installation](#-installation)
-    - [⚪ Usage](#-usage)
-    - [🟤 Testing](#-testing)
+    - [⚪ Utilisation](#-utilisation)
   - [🌟 Roadmap](#-roadmap)
-  - [🤝 Contributing](#-contributing)
   - [📜 License](#-license)
-  - [✨ Acknowledgments](#-acknowledgments)
 
 </details>
 
 ---
 
-## 🔴 Overview
+## 🔴 Description
 
+Une application légère pour Windows qui affiche l'activité de votre système (CPU, RAM, Disques, Réseau) via une icône animée dans la barre des tâches, avec des statistiques détaillées.
 
+L'application est inspirée d'une application existante nommée [RunCat](https://kyome.io/runcat/index.html) qui est disponible uniquement sur MacOs.
 
 ---
 
 ## 🟠 Features
 
-<code>❯ REPLACE-ME</code>
+RunDog à les features suivantes:
+
+- Quand on survole l'icône de RunDog le pourcentage d'utilisation du CPU s'affiche
+- Quand on clique-gauche sur l'icône de RunDog, un menu s'ouvre et affiches les différentes statistique en temps réél (CPU, RAM, Disques et Réseau)
+<img src="https://img.shields.io/badge/-.NET%208.0-blueviolet?logo=dotnet" alt="Dotnet8">
+- Quand on clique-droit sur l'application, un menu s'ouvre et on peut :
+  - Mettre en pause l'animation
+  - Changer l'animal de l'animation
+  - Quitter RunDog
 
 ---
 
-## 🟡 Project Structure
+## 🟡 Structure du projet
 
 ```sh
 └── RunDog/
@@ -80,177 +86,61 @@
     └── logo.png
 ```
 
-### 🟢 Project Index
-
-<details open>
-	<summary><b><code>RUNDOG/</code></b></summary>
-	<!-- __root__ Submodule -->
-	<details>
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<div class='directory-path' style='padding: 8px 0; color: #666;'>
-				<code><b>⦿ __root__</b></code>
-			<table style='width: 100%; border-collapse: collapse;'>
-			<thead>
-				<tr style='background-color: #f8f9fa;'>
-					<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-					<th style='text-align: left; padding: 8px;'>Summary</th>
-				</tr>
-			</thead>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/StatsForm.cs'>StatsForm.cs</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/SpriteSheet.cs'>SpriteSheet.cs</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/Sparkline.cs'>Sparkline.cs</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/RunDogApplicationContext.cs'>RunDogApplicationContext.cs</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/RunDog.csproj'>RunDog.csproj</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/Program.cs'>Program.cs</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/kimous/RunDog/blob/master/LICENSE'>LICENSE</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-			</table>
-		</blockquote>
-	</details>
-</details>
-
 ---
 
-## 🔵 Getting Started
+## 🔵 Commencer avec RunDog
 
-### 🟣 Prerequisites
+### 🟣 Prérequis
 
-This project requires the following dependencies:
+Ce projet necessite les dépendances suivantes:
 
-- **Programming Language:** CSharp
-- **Package Manager:** Nuget
+- **Langage:** CSharp/C#
+- **Framework:** Donet/.net 8
 
 ### ⚫ Installation
 
-Build RunDog from the source and intsall dependencies:
+Build RunDog à partir des sources:
 
-1. **Clone the repository:**
+1. **Cloner le repository:**
 
     ```sh
     ❯ git clone https://github.com/kimous/RunDog
     ```
 
-2. **Navigate to the project directory:**
+2. **Se déplacer dans le dossier du projet:**
 
     ```sh
     ❯ cd RunDog
     ```
 
-3. **Install the dependencies:**
 
-<!-- SHIELDS BADGE CURRENTLY DISABLED -->
-	<!-- [![nuget][nuget-shield]][nuget-link] -->
-	<!-- REFERENCE LINKS -->
-	<!-- [nuget-shield]: https://img.shields.io/badge/C%23-239120.svg?style={badge_style}&logo=c-sharp&logoColor=white -->
-	<!-- [nuget-link]: https://docs.microsoft.com/en-us/dotnet/csharp/ -->
+### ⚪ Utilisation
 
-	**Using [nuget](https://docs.microsoft.com/en-us/dotnet/csharp/):**
+Lancer le projet avec :
 
-	```sh
-	❯ dotnet restore
-	```
-
-### ⚪ Usage
-
-Run the project with:
-
-**Using [nuget](https://docs.microsoft.com/en-us/dotnet/csharp/):**
+**Depuis une invite de commande [Powershell]():**
 ```sh
 dotnet run
-```
-
-### 🟤 Testing
-
-Rundog uses the {__test_framework__} test framework. Run the test suite with:
-
-**Using [nuget](https://docs.microsoft.com/en-us/dotnet/csharp/):**
-```sh
-dotnet test
 ```
 
 ---
 
 ## 🌟 Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [ ] **`UX`**: Améliorer l'UX / l'esthétique
+- [ ] **`Logos`**: Refaire des meilleurs logos (disque, cpu, ram, ...)
+- [ ] **`Animations`**: Refaire des meilleurs animations
+- [ ] **`Optimisation`**: Améliorer la réactivité au clique après quelques minutes sans y toucher.
 
 ---
 
-## 🤝 Contributing
 
-- **💬 [Join the Discussions](https://github.com/kimous/RunDog/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/kimous/RunDog/issues)**: Submit bugs found or log feature requests for the `RunDog` project.
-- **💡 [Submit Pull Requests](https://github.com/kimous/RunDog/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://github.com/kimous/RunDog
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/kimous/RunDog/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=kimous/RunDog">
-   </a>
-</p>
-</details>
-
----
 
 ## 📜 License
 
 Rundog is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
-
-## ✨ Acknowledgments
-
-- Credit `contributors`, `inspiration`, `references`, etc.
 
 <div align="right">
 
@@ -260,6 +150,5 @@ Rundog is protected under the [LICENSE](https://choosealicense.com/licenses) Lic
 
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
 
 ---
