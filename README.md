@@ -1,7 +1,7 @@
 <div id="top">
 
 <!-- HEADER STYLE: COMPACT -->
-<img src="https://github.com/kimous/RunDog/blob/main/logo.png?raw=true" width="30%" align="left" style="margin-right: 15px">
+<img src="https://github.com/kimous/RunDog/blob/main/logo.png?raw=true" width="20%" align="left" style="margin-right: 15px">
 
 # RUNDOG
 <em></em>
