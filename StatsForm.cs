@@ -79,7 +79,7 @@ public partial class StatsForm : Form
     {
         var rowLayout = new TableLayoutPanel { AutoSize = true, Margin = new Padding(10), ColumnCount = 2 };
         rowLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 38));
-        rowLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        rowLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 260)); // Largeur fixe pour le contenu
 
         var icon = new PictureBox { Size = new Size(28, 28), SizeMode = PictureBoxSizeMode.Zoom, Image = GetIcon(iconResource), Margin = new Padding(0,0,10,0) };
         rowLayout.Controls.Add(icon, 0, 0);
