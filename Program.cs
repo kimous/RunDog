@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Threading;
 
 namespace RunDog
 {
@@ -10,8 +11,11 @@ namespace RunDog
         [STAThread]
         static void Main()
         {
-            // Définir la culture de l'interface utilisateur pour la localisation
-            CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InstalledUICulture;
+            // Définir la culture pour le thread actuel en fonction de la culture de l'OS
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InstalledUICulture;
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.InstalledUICulture;
+
+            // CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InstalledUICulture; // Cette ligne peut être commentée ou supprimée si les lignes ci-dessus sont utilisées
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
