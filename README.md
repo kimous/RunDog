@@ -42,7 +42,7 @@
 ## 🔴 Description
 
 Une application légère pour Windows qui affiche l'activité de votre système (CPU, RAM, Disques, Réseau) via une icône animée dans la barre des tâches, avec des statistiques détaillées.  
-L'icône animée représente un animal qui court et celui-ci court de plus en vite suivant le pourcentage de CPU utilisé.
+L'icône animée représente un animal qui court et celui-ci court de plus en plus vite suivant le pourcentage de CPU utilisé.
 
 L'application est inspirée d'une application existante nommée [RunCat](https://kyome.io/runcat/index.html) qui est disponible uniquement sur MacOs.
 
@@ -50,20 +50,20 @@ L'application est inspirée d'une application existante nommée [RunCat](https:/
 
 ## 🟠 Features
 
-RunDog à les features suivantes:
+RunDog a les features suivantes:
 
 - Quand on survole l'icône de RunDog le pourcentage d'utilisation du CPU s'affiche
-- Quand on clique-gauche sur l'icône de RunDog, un menu s'ouvre et affiches les différentes statistique en temps réél (CPU, RAM, Disques et Réseau)  
+- Quand on clique-gauche sur l'icône de RunDog, un menu s'ouvre et affiche les différentes statistiques en temps réel (CPU, RAM, Disques et Réseau)  
 <img src="https://github.com/kimous/RunDog/blob/main/screenshots/ScreenShot_menu_stats.png?raw=true" alt="menu_statistiques">  
 
 - Sur la fenêtre de statistique :
   - Cliquer sur une section "Storage" ouvre l'explorateur de fichier correspondant
-  - Cliquer sur la section "Réseau" copie l'IP dans le presse papier
+  - Cliquer sur la section "Réseau" copie l'IP dans le presse-papier
 - Quand on clique-droit sur l'application, un menu s'ouvre et on peut :
   - Mettre en pause l'animation
   - Changer l'animal de l'animation
   - Quitter RunDog
-- Prise en charge multilangue : 
+- Prise en charge multilingue : 
   - Anglais (par défaut si langue non détectée ou non prise en charge)
   - Français
 
@@ -106,7 +106,7 @@ RunDog à les features suivantes:
 
 ### 🟣 Prérequis
 
-Ce projet necessite les dépendances suivantes:
+Ce projet nécessite les dépendances suivantes:
 
 - **Langage:** CSharp/C#
 - **Framework:** Donet/.net 8
@@ -142,9 +142,9 @@ dotnet run
 ## 🌟 Roadmap
 
 - [ ] **`UX`**: Améliorer l'UX / l'esthétique
-- [ ] **`Logos`**: Refaire des meilleurs logos (disque, cpu, ram, ...)
-- [ ] **`Animations`**: Refaire des meilleurs animations
-- [ ] **`Optimisation`**: Améliorer la réactivité au clique après quelques minutes sans y toucher.
+- [ ] **`Logos`**: Refaire de meilleurs logos (disque, cpu, ram, ...)
+- [ ] **`Animations`**: Refaire de meilleurs animations
+- [ ] **`Optimisation`**: Améliorer la réactivité au clic après quelques minutes sans y toucher.
 
 ---
 
